@@ -8,6 +8,9 @@
     },
     "extensions": [
         "wesbos.theme-cobalt2",
-        "esbenp.prettier-vscode"
+        "esbenp.prettier-vscode",
+        "ms-toolsai.jupyter",
+        "formulahendry.code-runner",
+        "ms-python.python",
     ]
 }
