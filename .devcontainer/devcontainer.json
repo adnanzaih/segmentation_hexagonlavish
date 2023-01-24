@@ -1,6 +1,9 @@
 {
     "name": "HL-Segmentation-Env",
     "dockerFile": "Dockerfile",
+    "runArgs": [
+        "DISPLAY=$DISPLAY",
+    ],
     "appPort": [3000],
     "settings": {
         "workbench.colorTheme": "Cobalt2",
