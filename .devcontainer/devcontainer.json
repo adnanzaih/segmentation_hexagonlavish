@@ -12,5 +12,7 @@
         "ms-toolsai.jupyter",
         "formulahendry.code-runner",
         "ms-python.python",
+        "github.copilot",
+        "github.copilot-labs",
     ]
 }

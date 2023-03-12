@@ -2,7 +2,7 @@ import numpy as np
 import cv2
 from PIL import Image
 from skimage import io
-
+import re
 
 class Normalize:
 
@@ -13,6 +13,7 @@ class Normalize:
         self.filepath = filepath
 
     def normalize_image(self):
+        """Open an image file and convert it to a tensor."""
         # Open the image file
         img = io.imread(self.filepath)
         # Convert the image to a numpy array
@@ -28,3 +29,9 @@ class Normalize:
         norm_image = cv2.normalize(img, None, alpha=0, beta=1, norm_type=cv2.NORM_MINMAX, dtype=cv2.CV_32F)
         # Display the original image
         return norm_image
+
+    def phonenumber_filter(self):
+        pattern = r'(\d{3})-(\d{3})-(\d{4})'
+        text = 'My phone number is 123-456-7890'
+        phone_number = re.search(pattern, text)
+        return phone_number
